@@ -1,1 +1,23 @@
-# russian-toxic-classifier
+# Russian Language Sentiment & Toxicity Classifier 🚀
+
+Проект по дообучению (Fine-tuning) предобученной языковой модели BERT для классификации токсичности и эмоциональной окраски в русскоязычных текстах.
+
+## Стек технологий
+* **Python**, **PyTorch**
+* **Hugging Face Transformers** & `datasets`
+* **tqdm** (интерактивный логгинг батчей)
+* **Matplotlib** (отслеживание кривых обучения)
+
+## Архитектура
+В качестве бэкбона используется модель `cointegrated/rubert-tiny2`. Эмбеддинг `[CLS]` токена пропускается через кастомную полносвязную голову (`nn.Linear`) для бинарной классификации. На этапе препроцессинга была реализована батчевая токенизация на CPU, что исключило bottleneck и ускорило вычисления на GPU.
+
+## Результаты на тестовой выборке
+* **Mean Loss:** 0.1466
+* **Accuracy:** 96.01%
+
+# russian-toxic-classifier/
+│
+├── dataset.py       # Класс ToxicDataset с tqdm
+├── model.py         # Архитектура BertClassifier
+├── train.py         # Цикл обучения, логгер tqdm и отрисовка графиков
+└── evaluate.py      # Скрипт валидации модели на тестовых данных
