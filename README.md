@@ -14,10 +14,3 @@
 ## Результаты на тестовой выборке
 * **Mean Loss:** 0.1466
 * **Accuracy:** 96.01%
-
-# russian-toxic-classifier/
-│
-├── dataset.py       # Класс ToxicDataset с tqdm
-├── model.py         # Архитектура BertClassifier
-├── train.py         # Цикл обучения, логгер tqdm и отрисовка графиков
-└── evaluate.py      # Скрипт валидации модели на тестовых данных
