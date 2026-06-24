@@ -1,4 +1,5 @@
 # Russian Language Sentiment & Toxicity Classifier 🚀
+[![HF Spaces](https://img.shields.io/badge/🤗%20Demo-Live-blue)](https://huggingface.co/spaces/tegpro/russian-toxic-classifier)
 
 Проект по дообучению (Fine-tuning) предобученной языковой модели BERT для классификации токсичности и эмоциональной окраски в русскоязычных текстах.
 
